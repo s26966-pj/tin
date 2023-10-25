@@ -1,0 +1,124 @@
+<!DOCTYPE html> <!--HTML5-->
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Zadanie1</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta name="description" content="Cwiczenia z html">
+        <style>
+            table {border: 1px solid red;}
+            td, th {border: 1px solid blue;}
+        </style>
+    </head>
+    <body>
+        <div class="outermostflex">
+            <div class="flex">
+                <div class="header">
+                    <ul>
+                        <li id="toplink"><a href="#" class="outeranchortext" class="outertext" target="_blank">link</a>
+                            <ul id="to">
+                                <li class="wewnlink"><a href="#" target="_blank">link 2</a></li>
+                                <li class="wewnlink"><a href="#" target="_blank">link 2</a></li>
+                                <li class="wewnlink"><a href="#" target="_blank">link 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="zewnlink"><a href="#" class="outertext" target="_blank">link2</a></li>
+                        <li class="zewnlink"><a href="#" class="outertext" target="_blank">link3</a></li>
+                    </ul>
+                </div>
+                <div class="main-part">
+                    <h1>Nagłówek</h1> <!-- od h1 do h6-->
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam perferendis illum voluptatum iure consequuntur consectetur corrupti culpa exercitationem neque harum! Debitis, dolore ipsa repellat ipsum soluta eos praesentium ad laudantium explicabo voluptates fugit aut? Maiores maxime eos vel ad iusto fugiat quia, reiciendis porro harum asperiores repudiandae doloremque, inventore molestiae ducimus quo odio. Hic facilis porro excepturi quidem placeat veritatis? Distinctio architecto dignissimos minima quas quibusdam itaque fugit consequatur, qui aperiam et iusto quia ex blanditiis porro doloribus aspernatur culpa repellat facere cumque totam in enim. Rem, aspernatur placeat. Necessitatibus, velit? Accusantium recusandae repellendus a doloribus suscipit repellat architecto. Animi.</p>
+                    <img src="grafika/nature-images.jpg" alt="picture of nature">
+                    <h2>Podtytuł</h2>
+                    <h3>Podtytuł</h3>
+                    <h4>Podtytuł</h4>
+                    <h5>Podtytuł</h5>
+                    <h6>Podtytuł</h6>
+                    <form action="index.html" method="post">
+                        <div class="lewalista">
+                            <div>
+                                <label for="imie">Imię i nazwisko</label> <!-- etykieta pola formularza--><br>
+                                <input type="text" name="imie" id="imie"> <!-- pole tekstowe jednowierszowe-->
+                            </div>
+                            <div>
+                                <label for="opis">Opis</label><br>
+                                <textarea name="opis" id="opis"></textarea> <!-- standardowe pole wielowierszowe-->
+                            </div>
+                        </div>
+                        <div class="prawalista">
+                            <label for="lista">Wiek</label>
+                            <select name="lista" id="lista"> <!-- lista rozwijalna-->
+                                <option>1-18</option>
+                                <option>19-65</option>
+                                <option>65-</option>
+                            </select>
+                            <div>
+                                <label for="op1">Opcja</label><br>
+                                <input type="radio" name="opcja" id="op1">a<br>
+                                <input type="radio" name="opcja" id="op2">b<br>
+                                <input type="radio" name="opcja" id="op3">c
+                            </div>
+                            <!-- <div>
+                                <label for="ch1">Język</label><br>
+                                <input type="checkbox" name="opcja1" id="ch1">Angielski
+                                <input type="checkbox" name="opcja1" id="ch2">Niemiecki
+                                <input type="checkbox" name="opcja1" id="ch3">Francuski
+                            </div>
+                            -->
+                            <div>
+                                <input type="submit" name="wyślij" id="wyślij" value="Wyślij">
+                                <input type="reset" name="wyczyść" id="wyczyść" value="Wyczyść">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="tablediv">
+                        <table>
+                            <tr>
+                                <th>col1</th>>
+                                <th>col2</th>>
+                                <th>col3</th>>
+                            </tr>>
+                            <tr>
+                                <td>11</td>
+                                <td>12</td>
+                                <td>13</td>
+                            </tr>
+                            <tr>
+                                <td>21</td>
+                                <td>22</td>
+                                <td>23</td>
+                            </tr>
+                            <tr>
+                                <td>31</td>
+                                <td>32</td>
+                                <td>33</td>
+                            </tr>
+                            <tr>
+                                <td>41</td>
+                                <td>42</td>
+                                <td>43</td>
+                            </tr>
+                            <tr>
+                                <td>51</td>
+                                <td>52</td>
+                                <td>53</td>
+                            </tr>
+                            <tr>
+                                <td>61</td>
+                                <td>62</td>
+                                <td>63</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <p>przykladowy tekst</p>
+                <p>przykladowy tekst</p>
+                <p>przykladowy tekst</p>
+            </footer>
+        </div>
+    </body>
+</html>>
