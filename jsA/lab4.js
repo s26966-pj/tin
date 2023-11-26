@@ -1,8 +1,4 @@
-window.onload = fun()
 
-function fun() {
-
-}
 
 function z1(a, b, c) {
     if (a * a + b * b === c * c || c * c + b * b === a * a || a * a + c * c === b * b) {
@@ -124,25 +120,9 @@ function z9(height) {
 }
 
 function z10(words, string) {
-
     words.forEach(word => {
-        console.log("KKKK")   
-        for(let i = 0; i < string.length; i++) {
-            console.log("!")
-            for(let j = 0; j < word.length; j++) {
-                console.log(word[j] + " " + string[i]);
-                if(word[j] === string[i]) {
-                    if(j === word.length - 1) {
-                        console.log("*");
-                    }
-                    i++;
-                } else {
-                    while(string[i] != " " || i === string.length-1) {
-                        i++
-                    }
-                }
-                console.log(j)
-            }
-        }
+        string = string.replace(word, "*")
     });
+    console.log(string)
 }
+
