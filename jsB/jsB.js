@@ -44,6 +44,8 @@ function dodajRokDoAut() {
     });
 }
 
+///////////////////
+
 class Ocena {
     constructor(przedmiot, wartosc) {
         this.przedmiot = przedmiot
