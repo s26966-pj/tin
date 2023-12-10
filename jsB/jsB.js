@@ -1,8 +1,8 @@
 var auto = {
     rok: 2010,
     przebieg: 150000,
-    cena_wyjsciowa: 15000,
-    cena_koncowa: 15000,
+    cena_wyjsciowa: 30000,
+    cena_koncowa: 30000,
 
     dodaj: function () {
         this.cena_wyjsciowa += 1000
@@ -11,13 +11,11 @@ var auto = {
     przeliczPoRoku: function () {
         let wiek = new Date().getFullYear() - this.rok
         this.cena_koncowa -= wiek * 1000
-        console.log(wiek)
     },
 
     przeliczPoPrzebiegu: function () {
         mnoznik = Math.floor(this.przebieg / 100000)
         this.cena_koncowa -= mnoznik * 10000
-        console.log(mnoznik)
     },
 
     dodajPrzebiegIRok: function (przebieg, rok) {
@@ -87,5 +85,3 @@ let s = new Student('Jan', 'Kowalski')
 
 let o1 = new Ocena('mpr', 3)
 let o2 = new Ocena('rbd', 5)
-
-s.oceny = o1
