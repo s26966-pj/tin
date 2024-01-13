@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <link href="dentalcare.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <title>DentalCare</title>
+    <script src="dentalcare.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <a href="dentalcare.html">
+            <div class="logo">
+                <span class="dental-logo">Dental</span><span class="care-logo">Care</span>
+            </div>
+        </a>
+        <div class="menu">
+            <a href="dentalcare.html">
+                <div class="menu-item">Strona główna</div>
+            </a>
+            <a href="dentalcare_kliniki.html">
+                <div class="menu-item" id="active">Kliniki</div>
+            </a>
+            <a href="dentalcare_onas.html">
+                <div class="menu-item">O nas</div>
+            </a>
+            <a href="dentalcare_wizyta.html">
+                <div class="menu-item">Wizyta</div>
+            </a>
+            <a href="dentalcare_kontakt.html">
+                <div class="menu-item">Kontakt</div>
+            </a>
+        </div>
+        <div class="hamburger" onclick="toggle()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+    <div class="main">
+        <h1>Nasze kliniki</h1>
+        <span class="horizontal-divider"></span>
+        <div id="clinics-div">
+            <div class="clinic-section">
+                <h3>Warszawa</h3>
+                <p>ul. Kwiatowa 10, 00-001 Warszawa</p>
+                <p>tel. +48 123 456 789<br>
+                    pn - pt 8:00-20:00
+                <p>warszawa@dentalcare.pl</p>
+            </div>
+            <div class="clinic-section">
+                <h3>Kraków</h3>
+                <p>ul. Promienna 5, 11-111 Kraków</p>
+                <p>tel. +48 987 654 321<br>
+                    pn - pt 8:00-20:00
+                <p>krakow@dentalcare.pl</p>
+            </div>
+            <div class="clinic-section">
+                <h3>Gdańsk</h3>
+                <p>ul. Słoneczna 7, 22-222 Gdańsk</p>
+                <p>tel. +48 234 567 890<br>
+                    pn - pt 8:00-20:00
+                <p>gdansk@dentalcare.pl</p>
+            </div>
+            <div class="clinic-section">
+                <h3>Wrocław</h3>
+                <p>ul. Szczęśliwa 3, 33-333 Wrocław</p>
+                <p>tel. +48 345 678 901<br>
+                    pn - pt 8:00-20:00
+                <p>wroclaw@dentalcare.pl</p>
+            </div>
+            <div class="clinic-section">
+                <h3>Lublin</h3>
+                <p>ul. Nadziei 8, 44-444 Lublin</p>
+                <p>tel. +48 456 789 012<br>
+                    pn - pt 8:00-20:00
+                <p>lublin@dentalcare.pl</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; Kamil Littwitz 2024</p>
+    </div>
+</body>
+
+</html>

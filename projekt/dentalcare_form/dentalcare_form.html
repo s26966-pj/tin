@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <link href="../dentalcare.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <title>DentalCare</title>
+    <script src="../dentalcare.js"></script>
+    <script src="dentalcare_form.js"></script>
+</head>
+
+<body>
+    <div class="form-popup">
+        <h2>Formularz online</h2>
+        <h3>Jak to działa?</h3>
+        <br>
+        <div class="hiw-title">
+            <span class="step">1</span>
+            <h3>Wypełnij Podstawowe Dane</h3>
+        </div>
+        <p>Podaj podstawowe informacje, takie jak imię, nazwisko, numer telefonu. To wszystko, co potrzebujemy, aby
+            skontaktować się z Tobą.</p>
+
+        <div class="hiw-title">
+            <span class="step">2</span>
+            <h3>Wybierz Preferowany Termin i Klinike</h3>
+        </div>
+        <p>Zaznacz dogodny dla Ciebie dzień, porę wizyty oraz wybierz preferowaną klinikę. Proste i szybkie!</p>
+
+        <div class="hiw-title">
+            <span class="step">3</span>
+            <h3>Wybierz usługę</h3>
+        </div>
+        <p>Zaznacz rodzaj wizyty, jaki Cię interesuje. Czy to kontrola dentystyczna, leczenie zęba, profilaktyka, czy
+            coś innego? Wybierz usługę, a my dostosujemy nasze przygotowania do Twoich potrzeb.</p>
+
+        <div class="hiw-title">
+            <span class="step">4</span>
+            <h3>Potwierdź</h3>
+        </div>
+        <p>Kliknij "Wyślij" i gotowe! Nasz personel skontaktuje się z Tobą w celu potwierdzenia terminu wizyty.</p>
+        <span class="button bottom" onclick="pop()">Rozpocznij</span>
+    </div>
+    <div class="header">
+        <a href="../dentalcare.html">
+            <div class="logo">
+                <span class="dental-logo">Dental</span><span class="care-logo">Care</span>
+            </div>
+        </a>
+        <div class="menu">
+            <a href="../dentalcare.html">
+                <div class="menu-item">Strona główna</div>
+            </a>
+            <a href="../dentalcare_kliniki.html">
+                <div class="menu-item">Kliniki</div>
+            </a>
+            <a href="../dentalcare_onas.html">
+                <div class="menu-item">O nas</div>
+            </a>
+            <a href="../dentalcare_wizyta.html">
+                <div class="menu-item"  id="active">Wizyta</div>
+            </a>
+            <a href="../dentalcare_kontakt.html">
+                <div class="menu-item">Kontakt</div>
+            </a>
+        </div>
+        <div class="hamburger" onclick="toggle()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+    <div class="main">
+        <h1>Formularz online</h1>
+        <form>
+            <div class="steps">
+                <span class="step">1</span>
+                <span class="step next">2</span>
+                <span class="step next">3</span>
+                <span class="step next">4</span>
+            </div>
+            <div class="page">
+                <!-- <p>Podaj swoje podstawowe dane, takie jak imię, nazwisko, data urodzenia, adres zamieszkania, numer telefonu
+                    i
+                    adres e-mail. Te informacje są niezbędne do skutecznej komunikacji i potwierdzenia wizyty.</p> -->
+                <p class="bottom-margin">Podaj swoje podstawowe dane. Te informacje są niezbędne do skutecznej komunikacji i
+                    potwierdzenia wizyty.</p>
+                <div class="form">
+                    <div class="form-section">
+                        <h2>Dane osobowe</h2>
+                        <p class="input-title">Imię</p>
+                        <input class="input" type="text" name="firstname">
+                        <p class="input-title">Nazwisko</p>
+                        <input class="input" type="text" name="lastname">
+                        <p class="input-title">Data urodzenia</p>
+                        <input class="input" type="date" name="birthdate">
+                    </div>
+                    <div class="form-section">
+                        <h2>Adres</h2>
+                        <p class="input-title">Województwo</p>
+                        <input class="input" type="text" name="province">
+                        <p class="input-title">Miejscowość</p>
+                        <input class="input" type="text" name="city">
+                        <p class="input-title">Kod pocztowy</p>
+                        <input class="input" type="text" name="postalcode">
+                        <p class="input-title">Ulica i nr domu</p>
+                        <input class="input" type="text" name="street">
+                    </div>
+                    <div class="form-section">
+                        <h2>Dane kontaktowe</h2>
+                        <p class="input-title">Telefon</p>
+                        <input class="input" type="text" name="phone">
+                        <p class="input-title">Adres e-mail</p>
+                        <input class="input" type="text" name="mail">
+                    </div>
+                </div>
+            </div>
+            <div class="page">
+                <p class="bottom-margin">Wybierz termin oraz klinikę, w której chcesz odbyć wizytę.</p>
+                <div class="form">
+                    <div class="form-section">
+                        <h2>Data i godzina</h2>
+                        <input type="datetime-local" class="input" name="datetime">
+                    </div>
+                    <div class="form-section">
+                        <h2>Klinika</h2>
+                        <select class="input" name="clinic" id="clinic-select">
+                            <option disabled selected></option>
+                            <option value="ul. Kwiatowa 10, 00-001 Warszawa">ul. Kwiatowa 10, 00-001 Warszawa</option>
+                            <option value="ul. Promienna 5, 11-111 Kraków">ul. Promienna 5, 11-111 Kraków</option>
+                            <option value="ul. Słoneczna 7, 22-222 Gdańsk">ul. Słoneczny 7, 22-222 Gdańsk</option>
+                            <option value="ul. Szczęśliwa 3, 33-333 Wrocław">ul. Szczęśliwa 3, 33-333 Wrocław</option>
+                            <option value="ul. Nadziei 8, 44-444 Lublin">ul. Nadziei 8, 44-444 Lublin</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="page">
+                <p class="bottom-margin">Wybierz usługę.</p>
+                <div id="service-invalid">
+                    <span id="service-invalid-message"></span>
+                </div>
+                <div class="form" id="service-form">
+                    <div class="form-section-radio">
+                        <h2>Stomatologia standardowa</h2>
+                        <input type="radio" value="Przegląd dentystyczny" id="u1" class="radio-card" name="service">
+                        <label for="u1">
+                            <p>Przegląd dentystyczny</p>
+                            <div class="radio-cost">
+                                <p>150 zł</p>
+                            </div>
+                        </label>
+                        <input type="radio" value="Wypełnienie kompozytowe" id="u2" class="radio-card" name="service">
+                        <label for="u2">
+                            <p>Wypełnienie kompozytowe</p>
+                            <div class="radio-cost">
+                                <p>300-350 zł</p>
+                            </div>
+                        </label>
+                        <input type="radio" value="Odbudowa kompozytowa" id="u3" class="radio-card" name="service">
+                        <label for="u3">
+                            <p>Odbudowa kompozytowa</p>
+                            <div class="radio-cost">
+                                <p>400-650 zł</p>
+                            </div>
+                        </label>
+                        <input type="radio" value="Leczenie nadwrażliwości zęba" id="u4" class="radio-card" name="service">
+                        <label for="u4">
+                            <p>Leczenie nadwrażliwości zęba</p>
+                            <div class="radio-cost">
+                                <p>100-150 zł</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-section-radio">
+                        <h2>Profilaktyka i zabiegi higieniczne</h2>
+                        <input type="radio" value="Fluoryzacja" id="u5" class="radio-card" name="service">
+                        <label for="u5">
+                            <p>Fluoryzacja</p>
+                            <div class="radio-cost">
+                                <p>200 zł</p>
+                            </div>
+                        </label>
+                        <input type="radio" value="Skaling z piaskowaniem" id="u6" class="radio-card" name="service">
+                        <label for="u6">
+                            <p>Skaling z piaskowaniem</p>
+                            <div class="radio-cost">
+                                <p>300-350 zł</p>
+                            </div>
+                        </label>
+                        <input type="radio" value="Usunięcie kamienia nazębnego" id="u7" class="radio-card" name="service">
+                        <label for="u7">
+                            <p>Usunięcie kamienia nazębnego</p>
+                            <div class="radio-cost">
+                                <p>400-650 zł</p>
+                            </div>
+                        </label>
+                        <input type="radio" value="Leczenie nadwrażliwości zęba" id="u8" class="radio-card" name="service">
+                        <label for="u8">
+                            <p>Leczenie nadwrażliwości zęba</p>
+                            <div class="radio-cost">
+                                <p>100-150 zł</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-section-radio">
+                        <h2>Chirurgia stomatologiczna</h2>
+                        <input type="radio" value="Ekstrakcja standardowa" id="u9" class="radio-card" name="service">
+                        <label for="u9">
+                            <p>Ekstrakcja standardowa</p>
+                            <div class="radio-cost">
+                                <p>300-400 zł</p>
+                            </div>
+                        </label>
+                        <input type="radio" value="Usuwanie ósemek górnych" id="u10" class="radio-card" name="service">
+                        <label for="u10">
+                            <p>Usuwanie ósemek górnych</p>
+                            <div class="radio-cost">
+                                <p>500-650 zł</p>
+                            </div>
+                        </label>
+                        <input type="radio" value="Usuwanie ósemek dolnych" id="u11" class="radio-card" name="service">
+                        <label for="u11">
+                            <p>Usuwanie ósemek dolnych</p>
+                            <div class="radio-cost">
+                                <p>600-800 zł</p>
+                            </div>
+                        </label>
+                        <input type="radio" value="Usuwanie z zabiegiem na poziomie zatoki" id="u12" class="radio-card" name="service">
+                        <label for="u12">
+                            <p>Usuwanie na poziomie zatoki</p>
+                            <div class="radio-cost">
+                                <p>ok. 1000 zł</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-section-radio">
+                        <h2>Protetyka</h2>
+                        <input type="radio" value="Licówka kompozytowa" id="u13" class="radio-card" name="service">
+                        <label for="u13">
+                            <p>Licówka kompozytowa</p>
+                            <div class="radio-cost">
+                                <p>2000 zł</p>
+                            </div>
+                        </label>
+                        <input type="radio" value="Licówka pełnoceramiczna" id="u14" class="radio-card" name="service">
+                        <label for="u14">
+                            <p>Licówka pełnoceramiczna</p>
+                            <div class="radio-cost">
+                                <p>2500-3000 zł</p>
+                            </div>
+                        </label>
+                        <input type="radio" value="Proteza" id="u15" class="radio-card" name="service">
+                        <label for="u15">
+                            <p>Proteza</p>
+                            <div class="radio-cost">
+                                <p>2000-4000 zł</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="page">
+                <h2>Pomyślnie wypełniono formularz!</h2>
+                <p class="bottom-margin">Sprawdź swoje dane i wyślij</p>
+                <div id="form-results">
+                    <p>Imię: <span id="firstname"></span></p>
+                    <p>Nazwisko: <span id="lastname"></span></p>
+                    <p>Data urodzenia: <span id="birthdate"></span></p>
+                    <p>Województwo: <span id="province"></span></p>
+                    <p>Miejscowość: <span id="city"></span></p>
+                    <p>Kod pocztowy: <span id="postalcode"></span></p>
+                    <p>Ulica i nr domu: <span id="street"></span></p>
+                    <p>Telefon: <span id="phone"></span></p>
+                    <p>E-mail: <span id="mail"></span></p>
+                    <p>Data i godzina: <span id="datetime"></span></p>
+                    <p>Klinika: <span id="clinic"></span></p>
+                    <p>Usługa: <span id="service"></span></p>
+                </div>
+            </div>
+        </form>
+        <div style="height: 100%;"></div>
+        <div id="stepper-buttons">
+            <span class="button outline" id="previous" onclick="previousPage()">&lsaquo; Wróć</span>
+            <span class="button" id="next" onclick="nextPage()">Dalej &rsaquo;</span>
+            <a href="dentalcare_form_submitted.html"><span class="button" id="submit" onclick="submit()">Wyślij</span></a>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; Kamil Littwitz 2024</p>
+    </div>
+</body>
+
+</html>

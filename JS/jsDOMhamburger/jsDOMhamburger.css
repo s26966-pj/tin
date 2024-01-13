@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+p {
+    padding: 10px;
+}
+
+ul {
+    width: 100%;
+    padding: 0;
+}
+
+li {
+    float: left;
+    display: block;
+    width: 80px;
+    text-align: bottom;
+    height: 30px;
+    margin: 10px;
+}
+
+td {
+    border-bottom: 1px solid black;
+    padding: 0;
+    margin: 0;
+}
+
+form div {
+    width: 100%;
+}
+
+table {
+    width: 200px;
+    text-align: center;
+    border-spacing: 0;
+}
+
+img {
+    min-width: 100%;
+}
+
+.dropdown-content li {
+    float: none;
+    margin: 10px 0;
+    height: 20px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    float: none;
+    top: 50px;
+    width: 100px;
+    background-color: #f9f9f9;
+
+}
+
+.dropdown:hover+.dropdown-content,
+.dropdown-content:hover {
+    display: block;
+}
+
+.content {
+    clear: both;
+    padding: 20px;
+    background-color: grey;
+    height: 800px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 1000px) {
+    .content {
+        flex-direction: column;
+    }
+}
+
+.content-left {
+    width: 100%;
+    background-color: white;
+    height: 100%;
+    overflow: scroll;
+    padding: 10px;
+    margin: 20px;
+}
+
+.content-right {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    padding: 10px;
+    margin: 20px;
+}
+
+.header {
+    height: 60px;
+}
+
+.nav {
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+}
+
+.hamburger {
+    display: none;
+    margin: 10px;
+    background-color: transparent;
+    border: none;
+}
+
+.close-icon{
+    display: none;
+}
+
+.menu-icon {
+    display: block;
+}
+
+@media screen and (max-width: 500px) {
+    .nav {
+        display: none;
+        height: 500px;
+        background-color: white;
+        width: 300px;
+        position: fixed;
+    }
+
+    .nav.show {
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+    }
+    
+    li {
+        float: none
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer div {
+    width: 100%;
+}

@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8" />
     <title>title</title>
-    <script src="jsDOM.js"></script>
-    <link rel="stylesheet" href="jsDOM.css">
+    <script src="jsDOMdivy.js"></script>
+    <link rel="stylesheet" href="jsDOMdivy.css">
 </head>
 <body>
     <div class="buttons">
-        <button class="button">Dodaj</button>
-        <button class="button">Usuń</button>
-        <button class="button">Kolor 3</button>
-        <button class="button">Wpisz tekst</button>
+        <button class="button" onclick="addDiv()">Dodaj</button>
+        <button class="button" onclick="removeDiv()">Usuń</button>
+        <button class="button" onclick="colorDiv()">Kolor 3</button>
+        <button class="button" onclick="textDiv()">Wpisz tekst</button>
     </div>
 
-    <div class="main" id="main">
-        <div class="container" id="element"></div>
+    <div class="main">
+        <div class="container"></div>
         <div class="container"></div>
         <div class="container"></div>
         <div class="container"></div>

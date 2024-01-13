@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+
+.result{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: auto;
+    height: 150px;
+    width: 35%;
+    background-color:aliceblue;
+    margin: 100px auto;
+    border-radius: 20px;
+    color: grey;
+    text-align: right;
+    padding: 30px;
+    font-size: 50px;
+    border: 5px solid grey;
+}
+
+select{
+    width: 50px;
+}
+
+.input{
+    flex-wrap: wrap;
+    padding: 20px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    margin: auto;
+    height: 100px;
+    width: 35%;
+    border-radius: 20px;
+    border: 5px solid grey;
+}
+
